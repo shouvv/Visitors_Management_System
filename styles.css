@@ -1,0 +1,206 @@
+/* Reset default browser styles */
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables for consistent styling */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #e8491d;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+/* Header Styling */
+header {
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: var(--secondary-color) 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-right: 200px;
+    margin-left:0px;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #ffffff; /* White font color */
+    background-color: var(--primary-color); /* Dark background */
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Main Section */
+main {
+    padding: 20px 0;
+}
+
+.visitor-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.visitor-options .card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Rounded corners */
+    width: 25%;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.visitor-options .card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.visitor-options .card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Accent color */
+}
+
+.visitor-options .card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.visitor-options .card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Form Styling */
+.form-container {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #bf3a0e;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .visitor-options .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .header-right{
+        height: 10vw;
+        width: 30vw;
+    }
+}
+
+/* Accessibility */
+.visitor-options .card:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 4px;
+}
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+footer{
+    margin-top: 268px;
+}
+

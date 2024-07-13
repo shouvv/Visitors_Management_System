@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('images/backgd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .header-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-right i {
+            font-size: 20px;
+            color: #fff;
+        }
+        .visitor-options .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 45%; /* Increased width */
+            padding: 30px; /* Increased padding */
+            margin: 20px; /* Increased margin */
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .visitor-options .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('current-date').textContent = dateString;
+            document.getElementById('current-time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+    </script>
+</head>
+<body onload="updateTime()">
+    <header>
+        <div class="container">
+            <img src="images/companylogo.jpg" alt="Company Logo" class="logo">
+            <h1><center><h2>Visitors Management System</h2></center></h1>
+            <div class="header-right">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="current-date"></span>
+                <i class="fas fa-clock"></i>
+                <span id="current-time"></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="visitor-options">
+                <a href="transportation.html" class="card">
+                    <i class="fas fa-truck"></i>
+                    <h2>Transportation Visit</h2>
+                    <p>For all transportation-related visits.</p>
+                </a>
+                <a href="department.html" class="card">
+                    <i class="fas fa-building"></i>
+                    <h2>Department Visit</h2>
+                    <p>For visiting specific departments.</p>
+                </a>
+                <a href="normal_visit.html" class="card">
+                    <i class="fas fa-user"></i>
+                    <h2>Normal Visit</h2>
+                    <p>For general visits.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container"> 
+            <p>© 2024 Visitors Management System. All rights reserved.</p>
+        </div>
+        <marquee behavior="scroll" direction="left" style="background-color: #051736; color: #c9bdbd; padding: 5px;">
+            visitors-management-system@roquette india  
+        </marquee>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
