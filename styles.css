@@ -13,9 +13,9 @@ body, h1, h2, p, a {
 /* Variables for consistent styling */
 :root {
     --primary-color: #35424a;
-    --secondary-color: #e8491d;
+    --secondary-color: #960d0d;
     --background-color: #f4f4f4;
-    --text-color: #333;
+    --text-color: #000000;
 }
 
 /* Body Styling */
@@ -155,7 +155,7 @@ main {
 }
 
 .form-container button:hover {
-    background-color: #bf3a0e;
+    background-color: #000000;
     transform: scale(1.05);
 }
 

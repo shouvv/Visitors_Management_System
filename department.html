@@ -3,64 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department Visit - Visitors Management System</title>
+    <title>Visitors Management System</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        .department-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            flex-direction: column;
-            text-align: center;
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('images/backgd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            color: #333;
         }
-        .department-button {
-            padding: 20px 40px;
-            margin: 20px;
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            background: #fff;
+        }
+        .logo {
+            max-width: 100px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-right i {
             font-size: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background-color: #FF6D00; /* Orange theme */
-            color: white;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .header-right span {
+            font-size: 16px;
+            color: #333;
+        }
+        h1, h2 {
+            margin: 0;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        .visitor-options {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 300px;
+            gap: 20px;
+            margin-top: 20px;
         }
-        .department-button:hover {
-            background-color: #E35A00; /* Darker orange on hover */
+        .card {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif;
+        }
+        .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-        .department-button i {
-            margin-right: 10px;
+        .card i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #333;
+            transition: transform 0.2s;
+        }
+        .card:hover i {
+            transform: translateY(-10px);
+        }
+        .card h2 {
+            margin: 10px 0;
+            font-size: 22px;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+        }
+        footer {
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        marquee {
+            background-color: #051736;
+            color: #c9bdbd;
+            padding: 5px;
+        }
+        @media (min-width: 600px) {
+            .card {
+                width: 45%;
+            }
+        }
+        @media (min-width: 900px) {
+            .card {
+                width: 30%;
+            }
         }
     </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('current-date').textContent = dateString;
+            document.getElementById('current-time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+    </script>
 </head>
-<body>
+<body onload="updateTime()">
     <header>
         <div class="container">
             <img src="images/companylogo.jpg" alt="Company Logo" class="logo">
-            <h1>Department Visit</h1>
+            <h1>Visitors Management System</h1>
+            <div class="header-right">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="current-date"></span>
+                <i class="fas fa-clock"></i>
+                <span id="current-time"></span>
+            </div>
         </div>
     </header>
     <main>
-        <div class="department-container">
-            <button class="department-button" onclick="location.href='food_department.html'">
-                <i class="fas fa-utensils"></i> Food Department
-            </button>
-            <button class="department-button" onclick="location.href='production_department.html'">
-                <i class="fas fa-industry"></i> Production Department
-            </button>
+        <div class="container">
+            <div class="visitor-options">
+                <a href="food_department.html" class="card">
+                    <i class="fas fa-utensils"></i>
+                    <h2>Food Department</h2>
+                    <p>For all food-related visits.</p>
+                </a>
+                <a href="production_department.html" class="card">
+                    <i class="fas fa-industry"></i>
+                    <h2>Production Department</h2>
+                    <p>For production-related visits.</p>
+                </a>
+            </div>
         </div>
     </main>
     <footer>
         <div class="container">
             <p>© 2024 Visitors Management System. All rights reserved.</p>
         </div>
+        <marquee behavior="scroll" direction="left">
+            visitors-management-system@roquette india
+        </marquee>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
