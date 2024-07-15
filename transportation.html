@@ -230,8 +230,11 @@
                 <h2>Visitor Information</h2>
                 <form action="#" method="POST">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required> 
 
+                    <label for="id">Enter Phone No:</label>
+                    <input type="text" id="id" name="id" maxlength="10" required>
+                    
                     <label for="vehicle_no">Vehicle Number:</label>
                     <input type="text" id="vehicle_no" name="vehicle_no" required>
 
@@ -240,10 +243,11 @@
 
                     <label for="time_in">Time In:</label>
                     <input type="text" id="time_in" name="time_in" value="" readonly>
+                
 
                     <label for="id">ID (Aadhaar Card):</label>
                     <input type="text" id="id" name="id" maxlength="12" required>
-                    <span id="verified-badge" class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                    <span id="verified-badge" class="verified-badge"><i class="fas fa-check-circle"></i></span>
 
                     <label for="appointee">Name of Appointee:</label>
                     <select id="appointee" name="appointee" required>
