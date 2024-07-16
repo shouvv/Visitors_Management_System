@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <img src="../images/companylogo.jpg" alt="Company Logo" class="logo">
-            <h1>NORMAL VISIT</h1>
+            <h1>ELECTRICAL AND SAFETY DEPARTMENT</h1>
             <div class="header-right">
                 <font face='MONOSPACE'>  <img src="../images/calendar.png" height="23px" width="23px">
                     <span id="current-date"></span>
@@ -30,6 +30,12 @@
             <div class="form-container">
                 <h2>Visitor Information</h2>
                 <form action="#" method="POST">
+                    <label for="DEPARTMENT">SELECT THE DEPARTMENT :</label>
+                    <select id="DEPARTMENT" name="DEPARTMENT" required>
+                        <option value="">CHOOSE A DEPT.</option>
+                        <option value="appointee1">ELECTRICAL DEPARTMENT</option>
+                        <option value="appointee2">SAFETY INDUCTION</option>
+                    </select>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
