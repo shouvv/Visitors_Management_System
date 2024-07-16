@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitors Management System</title>
-    <link rel="stylesheet" href="styles_main.css">
-    <link rel="stylesheet" href="style_normal_visit.css">
+    <link rel="stylesheet" href="../CSS/styles_main.css">
+    <link rel="stylesheet" href="../CSS/style_transportation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        
-    </style>
 </head>
 <body onload="updateTime()">
     <header>
         <div class="container">
-            <img src="images/companylogo.jpg" alt="Company Logo" class="logo">
-            <h1>NORMAL VISIT</h1>
+            <img src="../images/companylogo.jpg" alt="Company Logo" class="logo">
+            <h1>TRANSPORTATION VISIT</h1>
             <div class="header-right">
-                <font face='MONOSPACE'>  <img src="images/calendar.png" height="23px" width="23px">
+                <font face='MONOSPACE'>  <img src="../images/calendar.png" height="23px" width="23px">
                     <span id="current-date"></span>
-                    <img src="images/time.png" height="25px" width="25px">
+                    <img src="../images/time.png" height="25px" width="25px">
                     <span id="current-time"></span></font>
             </div>
         </div>
@@ -31,17 +28,23 @@
                 <h2>Visitor Information</h2>
                 <form action="#" method="POST">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required> 
 
                     <label for="id">Enter Phone No:</label>
                     <input type="text" id="id" name="id" maxlength="10" required>
+                    
+                    <label for="vehicle_no">Vehicle Number:</label>
+                    <input type="text" id="vehicle_no" name="vehicle_no" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="2" required></textarea>
 
                     <label for="time_in">Time In:</label>
                     <input type="text" id="time_in" name="time_in" value="" readonly>
 
                     <label for="id">ID (Aadhaar Card):</label>
                     <input type="text" id="id" name="id" maxlength="12" required>
-                    <span id="verified-badge" class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                    <span id="verified-badge" class="verified-badge"><i class="fas fa-check-circle"></i></span>
 
                     <label for="appointee">Name of Appointee:</label>
                     <select id="appointee" name="appointee" required>
@@ -54,10 +57,6 @@
 
                     <input type="text" id="other_appointee" name="other_appointee" class="hidden" placeholder="Enter Appointee Name">
                     <input type="email" id="appointee_email" name="appointee_email" class="hidden" placeholder="Appointee E-mail ID">
-
-                  
-
-                  
                     <br>
                     <button type="submit">Submit</button>
                 </form>
