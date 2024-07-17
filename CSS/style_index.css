@@ -71,6 +71,13 @@ nav ul li a {
     color: #061844;
     font-weight: bold;
     font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #294da5;
+    color: #0a0a0a;
 }
 
 h1, h2 {
