@@ -112,23 +112,44 @@ header h1 {
     gap: 10px;
 }
 
+.top-right-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
 .top-right-buttons a {
     text-decoration: none;
-    color: black;
     font-size: 24px;
     background-color: #ddd;
     padding: 10px;
-    border-radius: 50%;
+    border: 2px solid #00f; /* Set the border color to blue */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
+    border-radius: 10px; /* Adjust the border radius for rounded corners */
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.top-right-buttons a i {
+    background: linear-gradient(45deg, #0000ff, #00bfff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .top-right-buttons a:hover {
     background-color: #bbb;
 }
+
+
+
+ 
 
 /* Main Section */
 main {
