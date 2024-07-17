@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url('../images/background.jpg');
@@ -7,51 +8,86 @@ body {
     margin: 0;
     color: #333;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
 }
+
+/* Header Styling */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 0;
     background: #fff;
-    position: relative; /* Add this line */
+    padding: 20px 0;
+    position: relative;
 }
+
 .logo {
     max-width: 100px;
 }
+
 .header-right {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .header-right i {
     font-size: 20px;
     color: #333;
 }
+
 .header-right span {
     font-size: 16px;
     color: #333;
 }
+
 .header-image {
-    position: absolute; /* Position the image absolutely within the header */
-    top:30px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
-    height: 130px; /* Adjust as needed */
-    width: 130px; /* Adjust as needed */
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 130px;
+    width: 130px;
 }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #061844;
+    font-weight: bold;
+    font-size: 16px;
+}
+
 h1, h2 {
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
+
 h1 {
     color: #333;
 }
+
+/* Main Section */
+main {
+    padding: 20px 0;
+}
+
 .visitor-options {
     display: flex;
     flex-wrap: wrap;
@@ -59,6 +95,7 @@ h1 {
     gap: 20px;
     margin-top: 20px;
 }
+
 .card {
     background: #ffffff;
     border: 1px solid #ffffff;
@@ -75,44 +112,65 @@ h1 {
     flex: 1;
     transition: transform 0.2s ease-in-out, flex 0.2s ease-in-out;
 }
+
 .card:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     z-index: 1;
 }
+
 .visitor-options:hover .card:not(:hover) {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
+
 .card i {
     font-size: 40px;
     margin-bottom: 10px;
     color: #333;
     transition: transform 0.2s;
 }
+
 .card:hover i {
     transform: translateY(-10px);
 }
+
 .card h2 {
     margin: 10px 0;
     font-size: 22px;
     color: #333;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Footer Styling */
 footer {
     background-color: #fff;
     color: #333;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
+
+footer .social-media a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+footer .social-media a:hover {
+    color: #061844;
+}
+
 marquee {
     background-color: #051736;
     color: #c9bdbd;
     padding: 5px;
 }
+
 @media (min-width: 600px) {
     .card {
         width: 45%;
     }
 }
+
 @media (min-width: 900px) {
     .card {
         width: 30%;
