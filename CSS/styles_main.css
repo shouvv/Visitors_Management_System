@@ -1,3 +1,44 @@
+.datetime-box {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Add relative positioning for the neon effect */
+    border: 2px solid #0074d9; /* Solid border */
+    box-shadow: inset 1px 1px 3px #bbb, /* Inset shadow for inset effect */
+                inset -1px -1px 3px #fff, /* Light inset shadow for depth */
+                0 2px 5px rgba(0, 0, 0, 0.1); /* Regular shadow for outset effect */
+}
+
+.datetime-box img {
+    margin-right: 5px;
+}
+
+.datetime-box span {
+    margin-right: 10px;
+}
+
+.datetime-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0074d9; /* Neon color */
+    opacity: 0.6; /* Adjust opacity for a subtle glow */
+    z-index: -1; /* Place behind the content */
+    border-radius: 8px; /* Match the border radius */
+    transform: scale(1.05); /* Slightly larger to create a glow effect */
+    filter: blur(8px); /* Add a blur effect for extra glow */
+}
+
 /* Reset default browser styles */
 *{
     padding: 0;

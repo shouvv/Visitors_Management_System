@@ -89,7 +89,7 @@ nav ul li a {
     transition: background-color 0.3s, color 0.3s;
 }
 nav ul li a:hover {
-    background-color: #294da5;
+    background-color: #cdcbcb;
     color: #0a0a0a;
 }
 

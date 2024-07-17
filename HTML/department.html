@@ -8,13 +8,7 @@
     <link rel="stylesheet" href="../CSS/style_department.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      
-    </style>
-    <script src="../js/script.js">
-      
-
-    </script>
+    <script src="../js/script.js"></script>
 </head>
 <body onload="updateTime()">
     <header>
@@ -23,10 +17,12 @@
                 <img src="../images/companylogo.jpg" alt="Company Logo" class="logo"></a>
             <h1>DEPARTMENTS !!</h1>
             <div class="header-right">
-                <img src="../images/calendar.png" height="23px" width="23px">
-                <span id="current-date"></span>
-                <img src="../images/time.png" height="25px" width="25px">
-                <span id="current-time"></span>
+                <div class="datetime-box">
+                    <img src="../images/calendar.png" height="23px" width="23px">
+                    <span id="current-date"></span>
+                    <img src="../images/time.png" height="25px" width="25px">
+                    <span id="current-time"></span>
+                </div>
             </div>
             <div class="top-right-buttons">
                 <a href="index.html" title="Home"><i class="fas fa-home"></i></a>
@@ -38,7 +34,7 @@
         <div class="container">
             <div class="visitor-options">
                 <a href="../HTML/admin.html" class="card">
-                    <img src="../images/admin.gif" height="120px" width="120px" blend:"muliply">
+                    <img src="../images/admin.gif" height="120px" width="120px">
                     <h2>ADMIN BLOCK</h2>
                     <p>For all Administrative-related visits.</p>
                 </a>
