@@ -25,29 +25,44 @@ body {
     font-size: 14px;
     transition: all 0.3s ease;
 }
+/* Header Styling */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 0;
     background: #fff;
+    padding: 20px 0;
+    position: relative;
 }
+
 .logo {
     max-width: 100px;
 }
+
 .header-right {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .header-right i {
     font-size: 20px;
     color: #333;
 }
+
 .header-right span {
     font-size: 16px;
     color: #333;
 }
+
+.header-image {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 130px;
+    width: 130px;
+}
+
 h1, h2 {
     margin: 0;
     text-align: center;
