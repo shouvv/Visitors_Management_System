@@ -13,6 +13,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: rgba(224, 224, 227, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .form-container input[type="text"],
@@ -20,12 +35,34 @@ body {
 .form-container textarea,
 .form-container select {
     width: 100%;
-    padding: 10px;
+    max-width: 100%;
+    padding: 12px 15px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #225eb4;
+    border-radius: 8px;
     font-size: 14px;
     transition: all 0.3s ease;
+    background: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    background: #fff;
+}
+
+.form-container label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
 }
 
 header {
@@ -56,8 +93,7 @@ header {
     color: #333;
 }
 
-h1,
-h2 {
+h1, h2 {
     margin: 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -141,9 +177,9 @@ marquee {
 .declaration-section {
     margin-top: 30px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border:  2px solid #225eb4;
     border-radius: 10px;
-    background: #f9f9f9;
+    background: #c9c9cb;
 }
 
 .declaration-section h3 {
@@ -160,7 +196,7 @@ marquee {
 .declaration-section table,
 .declaration-section th,
 .declaration-section td {
-    border: 1px solid #ddd;
+    border: 2px solid #225eb4;
 }
 
 .declaration-section th,
@@ -170,7 +206,7 @@ marquee {
 }
 
 .declaration-section th {
-    background-color: #f2f2f2;
+    background-color: #bebdbd;
 }
 
 .rules-section {
@@ -180,12 +216,8 @@ marquee {
     border-radius: 10px;
     background: #f9f9f9;
 }
-.rules-section .table-rule{
-    margin-left: 8px;
-}
 
 .rules-section h3 {
-    margin-left: 0;
     margin-bottom: 10px;
     color: #333;
 }
@@ -196,8 +228,6 @@ marquee {
 }
 
 .rules-section ul li {
-
-    margin-left: 12px;
     margin-bottom: 10px;
 }
 
@@ -222,4 +252,11 @@ marquee {
 
 .visible {
     display: block;
+}
+
+.verified-badge {
+    display: none;
+    color: green;
+    font-size: 16px;
+    margin-left: 10px;
 }
