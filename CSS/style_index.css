@@ -24,15 +24,6 @@ header {
     background: #fff;
     padding: 20px 0;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-header.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .logo {
@@ -87,6 +78,7 @@ nav ul li.nav-item:not(:last-child)::after {
     color: rgb(193, 0, 0);
 }
 
+
 nav ul li a {
     text-decoration: none;
     color: #061844;
@@ -96,7 +88,6 @@ nav ul li a {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
-
 nav ul li a:hover {
     background-color: #cdcbcb;
     color: #0a0a0a;
@@ -192,21 +183,6 @@ marquee {
     background-color: #051736;
     color: #c9bdbd;
     padding: 5px;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-    .header-right, .header-image {
-        display: none;
-    }
-    .container {
-        flex-direction: column;
-    }
-    nav {
-        position: relative;
-    }
 }
 
 @media (min-width: 600px) {
