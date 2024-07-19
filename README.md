@@ -1,9 +1,10 @@
-VISITORS MANAGEMENT SYSTEM IS A WAY OF MANAGING THE ENTRY OF THE VISITORS DIGITALLY WITHOUT ANY PAPERWORK , 
-THE PROCESS WHICH WILL BE IMPLEMENTED IN THIS PROJECT IS 
-:
-VISITOR WILL CHOOSE THE OPTIONS (DEPARTMENT AND TYPE OF VISIT): 
-FILL UP THE REQUIRED ENTRY TELLING THE NAME OF THE APPOINTEE:
-A VERIFICATION LINK OF TO THE EMAIL ACCOUNT OF THE APPOINTEE WILL BE SENT 
-THE APPOINTEE NEEDS TO CLICK THE LINK TO APPROVE THE ENTRY OF THE VISITOR
-ONCE THE LINK GET CLICKED , THE MESSAGE WILL SHOWN ON THE VISITORS SCREEN " YOUR ENTRY HAS BEEN APPROVED BY (___NAME OF APPOINTEE_____) AND A SLIP WILL BE PRINTED OUT 
+VISITORS MANGEMENT SYSTEM is a project to digitalising the Visitors in an organisation and giving a farewell to the old paper work method 
+which is :
+1> Time Consuming 
+2> Less Efficient 
+3> Difficult to fetch the details of the visitor
+4> Keeping the bundles on papers 
 
+Verification of visitor is done by E-Mail Verificaiton(which will be sent to the appointee e-mail address and the appointee needs to click the link to verify the visitor's entry)
+
+Further the safety induction and safety will be given to visitors Depending on Company's Protocols
